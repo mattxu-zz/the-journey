@@ -1,0 +1,9 @@
+.success {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.success-title {
+    font-size: 30px;
+    color: lightgreen;
+}

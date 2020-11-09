@@ -1,0 +1,62 @@
+.map-item {
+    height: 200px;
+    margin-bottom: 16px;
+}
+
+.map-item-hide {
+    background-color: #f9f9f9;
+}
+
+.map-item-show {
+    background-color: #1890ff;
+}
+
+.question-mark {
+    font-size: 40px;
+    line-height: 200px;
+    text-align: center;
+}
+
+.disabled {
+    background-color: lightgray;
+    opacity: .5;
+}
+
+.base-map-item {
+    height: 100%;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.base-map-item.battle-map-item {
+    background-color: crimson;
+}
+
+.base-map-item.boss-battle-map-item {
+    background-color: gold;
+}
+
+.base-map-item.store-map-item {
+    background-color: orange;
+}
+
+.base-map-item.exit-map-item {
+    background-color: lightgreen;
+}
+
+.map-item-title {
+    font-size: 1.5rem;
+}
+
+.map-item-content {
+    margin-top: 50px;
+}
+
+.map-item-btn {
+    width: 80%;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    height: auto;
+}

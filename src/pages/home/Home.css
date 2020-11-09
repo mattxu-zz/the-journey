@@ -1,0 +1,12 @@
+.home {
+    margin: 200px auto;
+}
+
+.entrance-btn {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    font-size: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

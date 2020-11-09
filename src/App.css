@@ -1,0 +1,90 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.attack {
+  color: lightcoral;
+}
+
+.defend {
+  color: lightblue;
+}
+
+.hp {
+  color: lightgreen;
+}
+
+.mp {
+  color: lightskyblue
+}
+
+.critical {
+  color: rgb(185, 3, 185);
+}
+
+.critical-damage {
+  color: rgb(121, 1, 121);
+}
+
+.dodge {
+  color: rgb(59, 199, 235);
+}
+
+.bloodsucking {
+  color: rgb(255, 41, 41);
+}
+
+.bloodsucking-rate {
+  color: rgb(236, 0, 0);
+}
+
+.weapon-level-common {
+  color: lawngreen;
+}
+
+.weapon-level-good {
+  color: rgb(89, 89, 255);
+}
+
+.weapon-level-rare {
+  color: rgb(185, 3, 185);
+}
+
+.weapon-level-god {
+  color: gold
+}
+
+.weapon-level-legend {
+  color: orange
+}

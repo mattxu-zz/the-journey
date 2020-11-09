@@ -1,0 +1,22 @@
+.report-container {
+    margin-top: 20px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.battle-scene-container {
+    position: relative;
+    width: 128px;
+}
+
+.battle-scene-icon {
+    width: 100%;
+    height: auto;
+}
+
+.battle-scene-damage {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%); 
+}

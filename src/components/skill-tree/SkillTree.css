@@ -1,0 +1,39 @@
+.skill-tree-container {
+    display: flex;
+    min-height: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.skill-tree-level {
+    flex-basis: 50px;
+}
+
+.skill-tree-item {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    margin: 4px;
+    border: 1px solid #999;
+    position: relative;
+}
+
+.skill-tree-item.skill-tree-item-disabled {
+    border-color: red;
+}
+
+.skill-tree-item-level {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    line-height: 1;
+}
+
+.skill-tree-item-plus {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    line-height: 1;
+    cursor: pointer;
+}

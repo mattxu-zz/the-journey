@@ -1,0 +1,10 @@
+.map {
+    width: 600px;
+    margin: auto;
+}
+
+.map-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}

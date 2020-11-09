@@ -1,0 +1,9 @@
+.game-over {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.game-over-title {
+    font-size: 30px;
+    color: red;
+}

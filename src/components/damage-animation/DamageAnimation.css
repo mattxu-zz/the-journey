@@ -1,0 +1,57 @@
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+        margin-bottom: 20px;
+    }
+    50% {
+        opacity: 0.5;
+        margin-bottom: 40px;
+    }
+    75% {
+        opacity: 0.25;
+        margin-bottom: 60px;
+    }
+    100% {
+        opacity: 0;
+        margin-bottom: 80px;
+    }
+}
+
+@-webkit-keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.75;
+        margin-bottom: 20px;
+    }
+    50% {
+        opacity: 0.5;
+        margin-bottom: 40px;
+    }
+    75% {
+        opacity: 0.25;
+        margin-bottom: 60px;
+    }
+    100% {
+        opacity: 0;
+        margin-bottom: 80px;
+    }
+}
+
+.damage-transition {
+    opacity: 0;
+    animation: fadeInOut 1s;
+    font-size: 20px;
+    color: lightcoral;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.critical-damage {
+    font-size: 30px;
+}

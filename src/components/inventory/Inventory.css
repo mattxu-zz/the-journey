@@ -1,0 +1,30 @@
+.item-drawer-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.item-drawer-item {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+    margin: 4px;
+    border: 1px solid #999;
+    position: relative;
+    cursor: pointer;
+}
+
+.item-drawer-item.equipped {
+    border: 1px solid #1890ff;
+}
+
+.item-drawer-item.limited {
+    border: 1px solid red;
+}
+
+.item-drawer-amount {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    line-height: 1;
+}
