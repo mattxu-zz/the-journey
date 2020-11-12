@@ -5,5 +5,5 @@ import { MonsterActions } from '../definition';
   	野猪  
 	攻击10%造成1.2倍伤害
 */
-export class WildBoar extends BaseMonster implements MonsterActions {
+export default class WildBoar extends BaseMonster implements MonsterActions {
 }

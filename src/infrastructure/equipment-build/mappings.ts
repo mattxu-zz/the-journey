@@ -111,7 +111,7 @@ const monsterEquipmentDropRateMappings: Dictionary<MonsterEquipmentMapping> = {
 			},
 		]
 	},
-	[MonsterType.KingOfBeasts]: {
+	[MonsterType.KingOfBeast]: {
 		equipments: [
 			{
 				type: EquipmentType.BeatKingHeavyArmor,

@@ -1,7 +1,7 @@
 import { BattleState, BattleActionType, BattleReportType, BattleDamage, DamageType } from "../definition";
 import { Action } from "redux";
 import { RolesFactory } from "../../infrastructure/roles";
-import { MonstersFactory } from "../../infrastructure/monsters";
+import MonstersFactory from "../../infrastructure/monsters";
 import { RoleActions } from "../../infrastructure/roles/definition";
 import { MonsterActions } from "../../infrastructure/monsters/definition";
 import { simpleDeepClone, guid } from "../../utils";

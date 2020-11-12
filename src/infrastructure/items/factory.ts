@@ -1,8 +1,9 @@
 import { ItemActions } from './definition';
 import { ItemType } from '../../definitions';
-import { Hemostasis, GoodHemostasis, PerfectHemostasis } from './hemostasis';
-import { AttackTreasure, GodAttackTreasure, SantaAttackTreasure } from './attack';
-import { DefendTreasure, GodDefendTreasure, SantaDefendTreasure } from './defend';
+import * as Hemostasises from './hemostasis';
+import * as MpPotions from './mp-potion';
+import * as AttackTreasures from './attack';
+import * as DefendTreasures from './defend';
 
 export class ItemsFactory {
     private static _items: DictionaryString<any> = {};
@@ -21,12 +22,7 @@ export class ItemsFactory {
     }
 }
 
-ItemsFactory.registerItem(ItemType.Hemostasis, Hemostasis);
-ItemsFactory.registerItem(ItemType.GoodHemostasis, GoodHemostasis);
-ItemsFactory.registerItem(ItemType.PerfectHemostasis, PerfectHemostasis);
-ItemsFactory.registerItem(ItemType.AttackTreasure, AttackTreasure);
-ItemsFactory.registerItem(ItemType.GodAttackTreasure, GodAttackTreasure);
-ItemsFactory.registerItem(ItemType.SantaAttackTreasure, SantaAttackTreasure);
-ItemsFactory.registerItem(ItemType.DefendTreasure, DefendTreasure);
-ItemsFactory.registerItem(ItemType.GodDefendTreasure, GodDefendTreasure);
-ItemsFactory.registerItem(ItemType.SantaDefendTreasure, SantaDefendTreasure);
+const items: DictionaryString<any> = {...Hemostasises, ...MpPotions, ...AttackTreasures, ...DefendTreasures};
+Object.keys(items).forEach((key) => {
+    ItemsFactory.registerItem(ItemType[key as keyof typeof ItemType], items[key]);
+});

@@ -1,5 +1,7 @@
-import { KingOfBeast } from './king-of-beasts'
+import KingOfBeast from './king-of-beasts'
+import DGeneral from './d-general'
 
 export {
-    KingOfBeast
+    KingOfBeast,
+    DGeneral,
 }

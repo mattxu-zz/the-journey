@@ -8,7 +8,7 @@ export function CharacterSkillRegister(type: SkillType, role: RoleType, level: n
     }
 }
 
-export class CharacterSkillFactory {
+export default class CharacterSkillFactory {
     private static _characterSkills: Dictionary<any> = {};
     private static _skills: DictionaryString<any> = {};
 

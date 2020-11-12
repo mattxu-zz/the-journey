@@ -1,9 +1,10 @@
-import { KingOfBeast } from './boss';
+import * as Boss from './boss';
 import { MonsterType } from '../../definitions';
 import { MonsterActions } from './definition';
-import { Bat, Wolf, WildBoar, Elephant, Tiger, Lion } from './jungle';
+import * as JungleMonsters from './jungle';
+import * as AbandonedLandMonsters from './abandoned-land';
 
-export class MonstersFactory {
+export default class MonstersFactory {
     private static _monsters: DictionaryString<any> = {};
 
     public static registerMonster(key: MonsterType, monster: any) {
@@ -20,10 +21,7 @@ export class MonstersFactory {
     }
 }
 
-MonstersFactory.registerMonster(MonsterType.Bat, Bat);
-MonstersFactory.registerMonster(MonsterType.Wolf, Wolf);
-MonstersFactory.registerMonster(MonsterType.WildBoar, WildBoar);
-MonstersFactory.registerMonster(MonsterType.Elephant, Elephant);
-MonstersFactory.registerMonster(MonsterType.Tiger, Tiger);
-MonstersFactory.registerMonster(MonsterType.Lion, Lion);
-MonstersFactory.registerMonster(MonsterType.KingOfBeasts, KingOfBeast);
+const monsters: DictionaryString<any> = {...JungleMonsters, ...AbandonedLandMonsters, ...Boss};
+Object.keys(monsters).forEach((key) => {
+    MonstersFactory.registerMonster(MonsterType[key as keyof typeof MonsterType], monsters[key]);
+});

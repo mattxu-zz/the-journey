@@ -1,17 +1,17 @@
 import { Skill, SkillCategory } from "../../../definition";
 import { CharacterSkillRegister } from "../../factory";
 import { RoleType, SkillType } from "../../../../../definitions";
-import { BasePositiveSkill } from "../../../base-positive";
+import BasePositiveSkill from "../../../base-positive";
 
 @CharacterSkillRegister(SkillType.CalmHit, RoleType.Knight, 1)
-export class CalmHit extends BasePositiveSkill implements Skill {
+export default class CalmHit extends BasePositiveSkill implements Skill {
     type = SkillType.CalmHit;
     category = SkillCategory.Positive;
     name = "沉稳一击";
 
     mpCost = 20;
 
-    increaseRate = 1.2;
+    increaseRate = 0.1;
     attackRate = 1.3;
     canCritical = false;
     getDescription(level: number) {

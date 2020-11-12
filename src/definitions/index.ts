@@ -91,13 +91,23 @@ export enum MonsterType {
 	Elephant = "大象",
 	Tiger = "猛虎",
 	Lion = "雄狮",
-	KingOfBeasts = "万兽之王",
+	KingOfBeast = "万兽之王",
+	Bandit = '山贼',
+	BanditLeader = '山贼头目',
+	DBandit = '魔化山贼',
+	Soldier = '士兵',
+	DSoldier = '魔化士兵',
+	General = '将军',
+	DGeneral = '魔化将军',
 }
 
 export enum ItemType {
 	Hemostasis = "止血草",
 	GoodHemostasis = "好止血草",
 	PerfectHemostasis = "完美止血草",
+	MpPotion = "回蓝药水",
+	GoodMpPotion = "好回蓝药水",
+	PerfectMpPotion = "完美回蓝药水",
 	AttackTreasure = '力量果',
 	GodAttackTreasure = '力量神果',
 	SantaAttackTreasure = '力量圣果',
@@ -146,11 +156,17 @@ export interface SkillMap {
 
 export enum SkillType {
 	CriticalTraining = "暴击训练",
-	QuickHit = "闪击",
+	CriticalTraining2 = "暴击训练2",
+	QuickHit = "闪电一击",
+	BackHit = "背刺",
 	DefendTraining = "防御训练",
+	HealthTraining = "生命训练",
 	CalmHit = "沉稳一击",
+	ShieldHit = "盾牌打击",
 	BloodsuckingTraining = "嗜血训练",
+	BloodsuckingTraining2 = "嗜血训练2",
 	BraveHit = "勇猛一击",
+	BloodDrinkHit = "饮血斩",
 }
 
 export interface User {

@@ -1,9 +1,9 @@
 import { Skill, SkillCategory } from "./definition";
 import { Status, SkillType } from "../../definitions";
-import { BaseSkill } from "./base";
+import BaseSkill from "./base";
 import { parseObjectValuesToFix2 } from "../../utils";
 
-export class BaseNegativeSkill extends BaseSkill implements Skill {
+export default class BaseNegativeSkill extends BaseSkill implements Skill {
     getHpCost(level: number): number {
         return 0;
     }

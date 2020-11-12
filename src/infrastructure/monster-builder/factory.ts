@@ -1,4 +1,4 @@
-import { BatMonsterParameter, WolfMonsterParameter, WildBoarMonsterParameter, ElephantMonsterParameter, TigerMonsterParameter, LionMonsterParameter, KingOfBeastsMonsterParameter } from './monster-parameters';
+import * as MonsterParameters from './monster-parameters';
 import { MonsterParameter } from './definition';
 import { MonsterType } from '../../definitions';
 
@@ -19,10 +19,8 @@ export class MonsterParameterFactory {
     }
 }
 
-MonsterParameterFactory.registerMonsterParameter(MonsterType.Bat, BatMonsterParameter);
-MonsterParameterFactory.registerMonsterParameter(MonsterType.Wolf, WolfMonsterParameter);
-MonsterParameterFactory.registerMonsterParameter(MonsterType.WildBoar, WildBoarMonsterParameter);
-MonsterParameterFactory.registerMonsterParameter(MonsterType.Elephant, ElephantMonsterParameter);
-MonsterParameterFactory.registerMonsterParameter(MonsterType.Tiger, TigerMonsterParameter);
-MonsterParameterFactory.registerMonsterParameter(MonsterType.Lion, LionMonsterParameter);
-MonsterParameterFactory.registerMonsterParameter(MonsterType.KingOfBeasts, KingOfBeastsMonsterParameter);
+const monsterParameters: DictionaryString<any> = {...MonsterParameters};
+Object.keys(monsterParameters).forEach((key) => {
+    const typeKey = key.replace('MonsterParameter', '');
+    MonsterParameterFactory.registerMonsterParameter(MonsterType[typeKey as keyof typeof MonsterType], monsterParameters[key]);
+});

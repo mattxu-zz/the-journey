@@ -11,9 +11,9 @@ function isEquipmentType(type: any): type is EquipmentType {
 
 export class StoreBuilder {
     static build(level: number): Store {
-        const mapping = storeGoodsMappings.find(m => m.level === level);
+        let mapping = storeGoodsMappings.find(m => m.level === level);
         if (!mapping) {
-            throw Error('没有找到符合等级的商店！')
+            mapping = storeGoodsMappings[storeGoodsMappings.length - 1];
         }
 
         let store: Store = {

@@ -1,17 +1,17 @@
  import { Skill, SkillCategory } from "../../../definition";
 import { CharacterSkillRegister } from "../../factory";
 import { RoleType, SkillType } from "../../../../../definitions";
-import { BasePositiveSkill } from "../../../base-positive";
+import BasePositiveSkill from "../../../base-positive";
 
 @CharacterSkillRegister(SkillType.QuickHit, RoleType.Assasin, 1)
-export class QuickHit extends BasePositiveSkill implements Skill {
+export default class QuickHit extends BasePositiveSkill implements Skill {
     type = SkillType.QuickHit;
     category = SkillCategory.Positive;
-    name = "闪击";
+    name = "闪电一击";
 
     mpCost = 20;
 
-    increaseRate = 1.2;
+    increaseRate = 0.05
     extraCritical = 0.2;
     canDodge = false;
     getDescription(level: number) {

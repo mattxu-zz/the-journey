@@ -29,19 +29,19 @@ const config = {
   levelUpStatusImproveNumber: {
     [RoleType.Assasin]: {
       HP: 100,
-      MP: 10,
+      MP: 20,
       Attack: 20,
       Defend: 10
     },
     [RoleType.Knight]: {
       HP: 150,
-      MP: 20,
+      MP: 30,
       Attack: 15,
       Defend: 30
     },
     [RoleType.Warrior]: {
       HP: 120,
-      MP: 0,
+      MP: 20,
       Attack: 20,
       Defend: 20
     }
@@ -61,6 +61,8 @@ const config = {
   sellGoodsDiscount: 0.2,
 
   messageDuration: 3,
+
+  skillCostGrowth: 0.05,
 }
 
 export default config;

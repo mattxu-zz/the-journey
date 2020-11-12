@@ -1,5 +1,3 @@
-import { MonstersFactory } from './factory';
+import MonstersFactory from './factory';
 
-export {
-	MonstersFactory
-}
+export default MonstersFactory;

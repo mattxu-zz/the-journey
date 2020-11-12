@@ -1,33 +1,70 @@
 import { StoreGoodsMapping } from "./definition";
 import { ItemType, EquipmentType } from "../../definitions";
 
+const basicGoods = [
+    {
+        type: ItemType.Hemostasis,
+        rate: 1
+    },
+    {
+        type: ItemType.GoodHemostasis,
+        rate: 0.8
+    },
+    {
+        type: ItemType.PerfectHemostasis,
+        rate: 0.5
+    },
+    {
+        type: ItemType.MpPotion,
+        rate: 1
+    },
+    {
+        type: ItemType.GoodMpPotion,
+        rate: 0.8
+    },
+    {
+        type: ItemType.PerfectMpPotion,
+        rate: 0.5
+    },
+    {
+        type: ItemType.AttackTreasure,
+        rate: 1
+    },
+    {
+        type: ItemType.DefendTreasure,
+        rate: 1
+    },
+    {
+        type: ItemType.GodAttackTreasure,
+        rate: 0.8
+    },
+    {
+        type: ItemType.GodDefendTreasure,
+        rate: 0.8
+    },
+    {
+        type: ItemType.SantaAttackTreasure,
+        rate: 0.5
+    },
+    {
+        type: ItemType.SantaDefendTreasure,
+        rate: 0.5
+    },
+]
+
 export const storeGoodsMappings: StoreGoodsMapping[] = [
     {
         level: 1,
         name: '丛林小店',
         goods: [
-            {
-                type: ItemType.Hemostasis,
-                rate: 1
-            }
+            ...basicGoods
         ]
     },
     {
         level: 2,
         name: '丛林小店',
         goods: [
-            {
-                type: ItemType.Hemostasis,
-                rate: 1
-            },
-            {
-                type: ItemType.AttackTreasure,
-                rate: 0.5
-            },
-            {
-                type: ItemType.DefendTreasure,
-                rate: 0.5
-            },
+            ...basicGoods,
             {
                 type: EquipmentType.Axe,
                 rate: 0.5
@@ -62,18 +99,8 @@ export const storeGoodsMappings: StoreGoodsMapping[] = [
         level: 3,
         name: '丛林小店',
         goods: [
-            {
-                type: ItemType.Hemostasis,
-                rate: 1
-            },
-            {
-                type: ItemType.AttackTreasure,
-                rate: 0.8
-            },
-            {
-                type: ItemType.DefendTreasure,
-                rate: 0.8
-            },
+            
+            ...basicGoods,
             {
                 type: EquipmentType.Axe,
                 rate: 0.8
@@ -108,30 +135,8 @@ export const storeGoodsMappings: StoreGoodsMapping[] = [
         level: 4,
         name: '丛林小店',
         goods: [
-            {
-                type: ItemType.Hemostasis,
-                rate: 1
-            },
-            {
-                type: ItemType.GoodHemostasis,
-                rate: 0.8
-            },
-            {
-                type: ItemType.AttackTreasure,
-                rate: 0.8
-            },
-            {
-                type: ItemType.DefendTreasure,
-                rate: 0.8
-            },
-            {
-                type: ItemType.GodAttackTreasure,
-                rate: 0.5
-            },
-            {
-                type: ItemType.GodDefendTreasure,
-                rate: 0.5
-            },
+            
+            ...basicGoods,
             {
                 type: EquipmentType.TigerAxe,
                 rate: 0.5
@@ -150,42 +155,8 @@ export const storeGoodsMappings: StoreGoodsMapping[] = [
         level: 5,
         name: '丛林小店',
         goods: [
-            {
-                type: ItemType.Hemostasis,
-                rate: 1
-            },
-            {
-                type: ItemType.GoodHemostasis,
-                rate: 1
-            },
-            {
-                type: ItemType.PerfectHemostasis,
-                rate: 0.5
-            },
-            {
-                type: ItemType.AttackTreasure,
-                rate: 1
-            },
-            {
-                type: ItemType.DefendTreasure,
-                rate: 1
-            },
-            {
-                type: ItemType.GodAttackTreasure,
-                rate: 0.8
-            },
-            {
-                type: ItemType.GodDefendTreasure,
-                rate: 0.8
-            },
-            {
-                type: ItemType.SantaAttackTreasure,
-                rate: 0.5
-            },
-            {
-                type: ItemType.SantaDefendTreasure,
-                rate: 0.5
-            },
+           
+            ...basicGoods,
             {
                 type: EquipmentType.TigerAxe,
                 rate: 0.8

@@ -1,5 +1,5 @@
-import { CalmHit } from './calm-hit';
-import { DefendTraining } from './defend-training';
+import CalmHit from './calm-hit';
+import DefendTraining from './defend-training';
 
 export {
     CalmHit,

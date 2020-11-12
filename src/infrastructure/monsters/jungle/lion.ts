@@ -6,7 +6,7 @@ import { MonsterActions } from '../definition';
     攻击20%造成1.2倍伤害
     防御时30%几率防御1.5倍
 */
-export class Lion extends BaseMonster implements MonsterActions {
+export default class Lion extends BaseMonster implements MonsterActions {
     defendPercent = 0.3;
 	defendRate = 1.5;
 }

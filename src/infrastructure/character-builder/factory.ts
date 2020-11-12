@@ -1,4 +1,4 @@
-import { WarriorParameter, AssasinParameter, KnightParameter } from './role-parameters';
+import * as RoleParameters from './role-parameters';
 import { RoleParameter } from './definition';
 import { RoleType } from '../../definitions';
 
@@ -19,6 +19,8 @@ export class RoleParameterFactory {
     }
 }
 
-RoleParameterFactory.registerRoleParameter(RoleType.Warrior, WarriorParameter);
-RoleParameterFactory.registerRoleParameter(RoleType.Assasin, AssasinParameter);
-RoleParameterFactory.registerRoleParameter(RoleType.Knight, KnightParameter);
+const roleParameters: DictionaryString<any> = {...RoleParameters};
+Object.keys(roleParameters).forEach((key) => {
+    const typeKey = key.replace('Parameter', '');
+    RoleParameterFactory.registerRoleParameter(RoleType[typeKey as keyof typeof RoleType], roleParameters[key]);
+});

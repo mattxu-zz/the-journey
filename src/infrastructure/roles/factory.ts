@@ -21,6 +21,7 @@ export class RolesFactory {
     }
 }
 
-RolesFactory.registerRole(RoleType.Warrior, Warrior);
-RolesFactory.registerRole(RoleType.Assasin, Assasin);
-RolesFactory.registerRole(RoleType.Knight, Knight);
+const roles: DictionaryString<any> = {Warrior, Assasin, Knight};
+Object.keys(roles).forEach((key) => {
+    RolesFactory.registerRole(RoleType[key as keyof typeof RoleType], roles[key]);
+});
